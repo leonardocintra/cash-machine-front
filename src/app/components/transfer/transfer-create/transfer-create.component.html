@@ -1,0 +1,36 @@
+<mat-card>
+    <mat-card-title>Nova transferencia</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome cliente" [(ngModel)]="customerName" name="name" />
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="CPF cliente" [(ngModel)]="customerCpf" name="cpf" />
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Conta origem" [(ngModel)]="transfer.accountOrigin" name="accountOrigin" />
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Conta destino" [(ngModel)]="transfer.accountTarget" name="accountTarget" />
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Valor" [(ngModel)]="transfer.amount" name="amount" />
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Data agendamento" [(ngModel)]="transferDate" name="transferDate" />
+        </mat-form-field>
+    </form>
+</mat-card>
+
+<button mat-raised-button (click)="createTransfer()" color="primary">
+    Salvar
+</button>
+
+<button mat-raised-button (click)="cancel()">
+    Cancelar
+</button>
