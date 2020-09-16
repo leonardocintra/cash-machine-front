@@ -21,7 +21,6 @@ export class TransferReadComponent implements OnInit {
   constructor(private transferService: TransferService) { }
 
   ngOnInit(): void {
-
     if (this.customer.cpf) {
       this.transferService.read(this.customer.cpf).subscribe(t => {
         this.transfers = t['records'];
@@ -30,9 +29,10 @@ export class TransferReadComponent implements OnInit {
     }
   }
 
-  findByCpf() {
+  findByCpf(): void {
     this.transferService.read(this.customer.cpf).subscribe(t => {
       this.transfers = t['records'];
+      this.customer = t['records'][0]['customer'];
     })
   }
 

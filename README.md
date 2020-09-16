@@ -1,6 +1,14 @@
-# Frontend
+
+
+# Cash Machine 
+
+https://cash-machine-front.herokuapp.com/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
+
+### Bugs to be fixed
+- Date format in html
+- When 404, 400 - Send message to user
 
 ## Development server
 
