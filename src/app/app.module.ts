@@ -28,8 +28,15 @@ import { MatSortModule } from '@angular/material/sort';
 import localePt from '@angular/common/locales/pt'
 import { registerLocaleData } from '@angular/common';
 import { TransferCreateComponent } from './components/transfer/transfer-create/transfer-create.component';
+import { IConfig, NgxMaskModule } from 'ngx-mask';
 
 registerLocaleData(localePt);
+
+const maskConfigFunction: () => Partial<IConfig> = () => {
+  return {
+    validation: false,
+  };
+};
 
 @NgModule({
   declarations: [
@@ -58,7 +65,8 @@ registerLocaleData(localePt);
     MatFormFieldModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    NgxMaskModule.forRoot(maskConfigFunction),
   ],
   providers: [{
     provide: LOCALE_ID,

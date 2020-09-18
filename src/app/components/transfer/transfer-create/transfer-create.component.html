@@ -22,7 +22,10 @@
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Data agendamento" [(ngModel)]="transferDate" name="transferDate" />
+            <input matInput placeholder="Data agendamento" 
+                [(ngModel)]="transferDate" 
+                mask="00/00/0000"
+                name="transferDate" />
         </mat-form-field>
     </form>
 </mat-card>
